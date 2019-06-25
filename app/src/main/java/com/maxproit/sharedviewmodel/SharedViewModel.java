@@ -16,6 +16,7 @@ public class SharedViewModel extends AndroidViewModel {
     public SharedViewModel(@NonNull Application application) {
         super(application);
         app = application;
+        Toast.makeText(application, "Create", Toast.LENGTH_SHORT).show();
     }
 
     public void setText(CharSequence text) {
@@ -32,5 +33,6 @@ public class SharedViewModel extends AndroidViewModel {
         super.onCleared();
         Toast.makeText(app, "onCleared", Toast.LENGTH_SHORT).show();
 
+        text = null;
     }
 }

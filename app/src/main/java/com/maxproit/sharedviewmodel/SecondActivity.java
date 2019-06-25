@@ -20,19 +20,14 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_second);
 
-        viewModel = ViewModelProviders.of(this).get(SharedViewModel.class);
+        //viewModel = ViewModelProviders.of(this).get(SharedViewModel.class);
 
         initViews();
 
     }
 
     private void initViews() {
-        viewModel.getText().observe(this, new Observer<CharSequence>() {
-            @Override
-            public void onChanged(@Nullable CharSequence charSequence) {
-                binding.edittext.setText(charSequence);
-            }
-        });
+
     }
 
     @Override
